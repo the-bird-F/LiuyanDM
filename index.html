@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="pragram" content="no-cache" />
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="expires" content="0" />
+  <link rel="icon" type="image/svg+xml" href="/logoIcon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数据挖掘Demo展示</title>
+
+  <style>
+    html {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: 375px) {
+      html {
+        font-size: calc(16px + 2 * (100vw - 375px) / 39);
+      }
+    }
+
+    @media screen and (min-width: 414px) {
+      html {
+        font-size: calc(18px + 4 * (100vw - 414px) / 586);
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      html {
+        font-size: calc(20px + 4 * (100vw - 600px) / 400);
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      html {
+        font-size: 14px;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e6f7ff; /* 浅蓝色背景 */
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product {
+      background: rgb(166, 203, 196);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+    }
+
+    .product-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-description {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-key {
+      font-size: 1rem;
+      color: #3822c8;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>六砚·字库</h1>
+    <div style="background-color: rgb(208, 235, 242); text-align: center; padding: 1.5rem; margin-top: 2rem; font-size: 1rem; color: #555;">
+        本页面展示的所有产品仅供演示，实际功能与价格以官网为准。感谢您的访问！
+    </div>
+    <div class="products">
+      <div class="product">
+        <img src="./苏东坡.jpg" />
+        <div class="product-info">
+          <div class="product-title">字</div>
+          <div class="product-description">智能记录，支持语音转写，办公学习好帮手。</div>
+          <div class="product-key">PageRank</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="./苏东坡.jpg" />
+        <div class="product-info">
+          <div class="product-title">词</div>
+          <div class="product-description">内置丰富学习资源，助你高效学习。</div>
+          <div class="product-key">FP-Tree</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="./苏东坡.jpg" />
+        <div class="product-info">
+          <div class="product-title">句</div>
+          <div class="product-description">解放双手，高效生活每一天。</div>
+          <div class="product-key">Embedding</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="./苏东坡.jpg" />
+        <div class="product-info">
+          <div class="product-title">诗</div>
+          <div class="product-description">支持中英双向翻译，轻松应对多语场景。</div>
+          <div class="product-key">Shillings</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background-color: #dff6ff; border-top: 1px solid #b5e1fa; text-align: left; padding: 2rem; margin-top: 3rem; font-size: 1.1rem; color: #333;">
+    团队介绍：六砚斋，诗社虽小，然志存高远。愿吾辈以砚为伴，悟言斋中，共品古典之幽微，同探诗词之新境。六砚斋之名，长存于心，长存于诗，亦长存于公众号 
+    ——《阿笨的虫虫们》。
+  </div>
+</body>
+</html>
