@@ -1,0 +1,9 @@
+langchain 
+langchain_huggingface 
+langchain_chroma 
+jieba 
+pandas 
+streamlit 
+hashlib 
+networkx 
+mlxtend
