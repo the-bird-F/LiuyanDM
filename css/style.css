@@ -155,12 +155,17 @@ body{
     line-height: 24px;
     color: #666;
 }
-
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     margin-top: 40px;
+  }
+  
+  .feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
   }
   
   .feature-card {
@@ -169,11 +174,12 @@ body{
     padding: 24px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
   
-  .feature-card:hover {
+  .feature-card-link:hover .feature-card {
     transform: translateY(-6px);
+    filter: brightness(0.95); /* 悬停变暗 */
   }
   
   .icon {
@@ -192,4 +198,15 @@ body{
     font-size: 15px;
     color: #666;
     line-height: 1.6;
+  }
+  
+  .feature-card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .feature-card-link:hover .feature-card {
+    background-color: #f0f0f0; /* 悬停变暗 */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
   }

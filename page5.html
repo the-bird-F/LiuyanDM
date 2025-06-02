@@ -27,34 +27,65 @@
   </div>
   <div class="clear"></div>
   <div class="clear"></div>
-  <div class="banner"><a href="#"><img src="images/background2cut.png"  width="1024"/></a></div>
+  <div class="banner"><a href="#"><img src="images/文本挖掘.png"  width="970"/></a></div>
   <div class="clear"></div>
-     <div class="position"><a href="index.html">Home/传承发展</a><span></span>
- </div><div class="main">
-    <div class="main_in">
-      <h2>&nbsp;传承发展
-      </h2><p> </p>
-      <p>先秦时期<br />
-朱宣咸中国画《端阳佳节》
-先秦时代，南北风俗各异，端午作为一个"节日"已各有所侧重。上古时南方百越，午月午日，籺叶飘香，龙舟呈祥，举行盛大祭祀仪式报祭龙祖恩德并祈丰年。战国时代，北方古人已把午月午日视为"恶月、恶日"。</p>
-      <p>秦汉时期<br />
-        到秦代之后，由于国家统一，南北的经济文化交流使风俗习惯也互相融合，端午节就在南北风俗融合的基础上形成了。汉时以北方文化为主导，就现文献记载来看，两汉时的端午风俗沿北俗主要以避恶为主。古越人最早的历法是太阳历，古越人认为午月的第一个午日是是天地纯阳之气极盛的吉祥日子，因此把该日定为祭祀日。汉代时，由于历法变动，朝廷为了便于过节，规定每年的端午节改为阴历五月初五，于是端午节就演变成为现在的五月初五日。</p>
-          <p>魏晋南北朝<br />
-       魏晋南北朝时期，由于战争频繁，人们饱尝战乱之苦，所以最重视的端午习俗莫过于"辟兵缯"了。 [71]  风俗作为一种社会生活方式来说，随着社会发展，一方面要受到上层的意识形态的影响，另一方面历史上许多仁人志士的活动，也必然会在风俗生活中积淀。因此，本来端午节起源于民间的原始崇拜，但是到了汉末魏晋时，就又被赋予纪念历史人物的内容。</p>
-        <p>隋唐时期<br />
-       隋唐时期，端午节从风俗形式上都继承了前朝。但是，从性质上讲，原来有特定意义的节日风俗活动，到此大多演变为节日娱乐活动，充满了节日的欢乐。唐玄宗《端午三殿宴群臣探得神字˙诗序》中记述：皇宫端午日盛况，召来儒雅臣僚，大张筵席，"广殿肃而清气生，列树深而长风至"。 
-唐代端午龙舟竞渡尤其值得一道。在唐代全盛时期，经济繁荣，人民生活相对稳定，在节日娱乐方面，一方面是上行下效，蔚成风气，另一方面对民间的一些风俗活动也受到官府的支持。因此，竞渡之风尤为鼎盛。</p>
-<p></p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
+     <div class="position"><a href="index.html">首页</a><span>/章回对应</span>
+ </div>
+ <div class="main">
+  <div class="main_in">
+    <h2>&nbsp;功能简介：章回对映</h2>
+
+    <p>在古典诗词创作与阅读过程中，常常会遇到以下两类场景：</p>
+    <p> 一是，创作时，记得某句诗但忘了出处，难以查证全诗上下文。</p>
+    <p>二是，已写成一段诗句，想寻找风格或内容相似的诗作进行续写或借鉴。</p>
+
+    <p>“章回对映”模块正是为此设计，旨在帮助用户通过一段文字快速定位相似的古典诗文，全诗呼应、以章对章，提升创作效率与联想空间。该功能可应用于内容索引、古诗联句、古文平行结构比对等场景，适合古典文学创作者、爱好者与研究者使用。</p>
+
+    <h2>&nbsp;实现原理：MinHash 签名与 Similar 检索</h2>
+    
+    <ol style="line-height:1.8;">
+      <li><strong>Shingle 切分：</strong> 将每首古诗词文本切分为长度固定的 <em>shingles</em>（字符窗口片段），以保留语序和结构信息。</li>
+      <li><strong>签名生成：</strong> 使用 50 组哈希函数对每首诗的 shingles 进行编码，生成具有代表性的 <strong>signature 向量</strong>，并构建签名数据库。</li>
+      <li><strong>输入处理：</strong> 用户输入文本同样进行 shingles 切分与 signature 编码，确保格式一致。</li>
+      <li><strong>相似度检索：</strong> 计算输入 signature 与数据库中所有签名的 Jaccard 相似度，快速筛选出 <strong>相似度最高的 Top-K 首诗词</strong> 进行推荐。</li>
+    </ol>
+
+    <h2>&nbsp;示例展示</h2>
+    <div style="background:#e3ecef; padding: 18px 24px; border-left: 6px solid #888; border-radius: 8px; margin: 20px 0;">
+      <p><strong>【元曲】</strong></p>
+      <p><strong>创作：</strong> <span style="color:#444;">他说：“那咋了，那咋了”</span></p>
+      <p><strong>推荐：</strong></p>
+      <ul style="list-style: disc; padding-left: 24px; color:#666;">
+        <li>(丑)赘在万俟府为女婿。(小生)你哥哥也曾上访问不曾？(丑)曾访问来。正遇孙郎下第归，他与吾兄面述其言，他说道：果赘侯门。(小生)孙汝权道你兄受他财礼。(丑)孙汝权，肉面对肉面，你家行甚财和礼？上有青……
+        </li>
+      </ul>
+      <p><strong>评价：</strong> 所推荐元曲场景符合原句话语，曲中角色（丑角）也贴合原句的角色性格。</p>
     </div>
+
+    <div style="background:#f4f4f4; padding: 18px 24px; border-left: 6px solid #888; border-radius: 8px; margin: 20px 0;">
+      <p><strong>【唐诗】</strong></p>
+      <p><strong>创作：</strong> <span style="color:#444;">孤舟蓑笠翁</span></p>
+      <p><strong>推荐：</strong></p>
+      <ul style="list-style: disc; padding-left: 24px; color:#666;">
+        <li>千山鸟飞绝，万径人踪灭。孤舟蓑笠翁，独钓寒江雪。</li>
+        <li>独树知秋早，孤舟觉夜寒。</li>
+        <li>未习风波事，初为东越游。
+          露沾湖草晚，月照海山秋。
+          梅市门何处，兰亭水向流。
+          西兴待潮信，落日满孤舟。</li>
+      </ul>
+      <p><strong>评价：</strong> 所推荐诗句与输入在意境上（孤寂、寒冷、舟）具有高度相似性，来自柳宗元等人的诗，适合作为续写灵感或意境平行参考。</p>
+    </div>
+
+   
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
   </div>
+</div>
   <div class="clear"></div>
   <div class="foot">
-    <p>端午节版权所有</p>
+    <p>六砚斋数据挖掘坊版权所有</p>
   </div>
   <div class="clear"></div>
 </div>
