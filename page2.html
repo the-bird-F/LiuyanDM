@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" />
+<title>六砚·字库</title>
+</head>
+
+<body>
+<div class="con">
+  <div class="head">
+    <div class="logo">
+      <h1>六砚·字库</h1></div>
+    <div class="clear"> </div>
+    <div class="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="page1.html">数据概览</a></li>
+        <li><a href="page2.html">字影流转</a></li>
+        <li><a href="page3.html">语林采珠</a></li>
+        <li><a href="page4.html">句意传心</a></li>
+        <li><a href="page5.html">章回对映</a></li>
+        <li><a href="page6.html">小组介绍</a></li></ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div class="clear"></div>
+  <div class="banner"><a href="#"><img src="images/字图.png"  width="1000"/></a></div>
+  <div class="clear"></div>
+  <div class="position"><a href="index.html">首页</a><span>/</span>字影流转
+  </div>
+  <div class="main">
+    <div class="main_in">
+      <h2>&nbsp; 功能介绍：下一字智能推荐 </h2>
+  
+      <p>在古典诗词创作过程中，常常会遇到“写到一半卡壳”的尴尬时刻。为此，我们基于 <strong>PageRank 算法</strong> 构建了一套“<strong>下一字智能推荐系统</strong>”，以辅助创作者顺畅续写。</p>
+  
+      <p>该功能可在用户输入部分诗句时，分析其最后一个字，并结合古诗词语料中大量上下文结构，推荐若干候选字，供继续创作使用。</p>
+
+      <p>该功能不仅可以提升诗词创作的流畅性，也具备一定的教育意义，帮助用户了解古人用字规律，提升古典语感。</p>
+
+      <h2>&nbsp; 实现原理：PageRank </h2>
+      <ul style="line-height:1.8;">
+        <li><strong>古诗图建模：</strong> 我们将语料中每一个字作为图中的节点，并依据句子中的先后顺序建立有向边。例如，“山川异域”会生成边：山 → 川，川 → 异，异 → 域。边的<strong>权重</strong>即该路径在全体语料中出现的频率。</li>
+        <li><strong>PageRank 训练：</strong> 通过迭代计算节点间的连接强度，PageRank 为每个字分配一个重要性评分，衡量它在整体语料中的“连接中心性”。</li>
+        <li><strong>生成推荐：</strong> 在用户输入的内容中，取其<strong>最后一个字</strong>作为当前图的起点，从其出边中挑选 PageRank 值最高的 Top-K 个字作为推荐结果。系统还会智能过滤掉标点和无效字符，确保推荐实用性。</li>
+      </ul>
+  
+
+      <h2>&nbsp; 示例展示：</h2>
+  
+      <div style="background-color:#f9f9f9; padding: 15px; border-left: 5px solid #8c9eff; font-family: 'Songti SC', serif; margin-bottom: 20px;">
+        <p><strong>【楚辞】</strong></p>
+        <p><strong>创作：</strong> 青青子衿，悠悠我</p>
+        <p><strong>推荐：</strong> <span style="color:#336699;">兮</span>、<span style="color:#336699;">之</span>、<span style="color:#336699;">心</span>、<span style="color:#336699;">为</span>、<span style="color:#336699;">与</span></p>
+        <p><strong>评价：</strong> 推荐结果契合“我”字后常见语义，其中“心”助于情感表达，“兮”等感叹词贴近《楚辞》风格。</p>
+      </div>
+  
+      <div style="background-color:#f9f9f9; padding: 15px; border-left: 5px solid #8c9eff; font-family: 'Songti SC', serif;">
+        <p><strong>【宋词】</strong></p>
+        <p><strong>创作：</strong> 但愿人长久，千里共婵</p>
+        <p><strong>推荐：</strong> <span style="color:#336699;">娟</span>、<span style="color:#336699;">韵</span>、<span style="color:#336699;">懒</span>、<span style="color:#336699;">媛</span></p>
+        <p><strong>评价：</strong> “婵”字之后推荐了“娟”等高频组合，语义优雅且富有联想价值，极具参考意义。</p>
+      </div>
+  
+
+
+      
+  
+      <!-- <p style="text-align: center; margin-top: 40px;">
+        <img src="images/下一字推荐示意图.png" width="500" alt="下一字推荐流程图" style="display: block; margin: 0 auto;" />
+      </p> -->
+  
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="foot">
+    <p>端午节版权所有</p>
+</div>
+  <div class="clear"></div>
+</div>
+</body>
+</html>

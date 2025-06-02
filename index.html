@@ -1,156 +1,95 @@
-<!doctype html>
-<html lang="zh">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="pragram" content="no-cache" />
-  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="expires" content="0" />
-  <link rel="icon" type="image/svg+xml" href="/logoIcon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>数据挖掘Demo展示</title>
-
-  <style>
-    html {
-      font-size: 16px;
-    }
-
-    @media screen and (min-width: 375px) {
-      html {
-        font-size: calc(16px + 2 * (100vw - 375px) / 39);
-      }
-    }
-
-    @media screen and (min-width: 414px) {
-      html {
-        font-size: calc(18px + 4 * (100vw - 414px) / 586);
-      }
-    }
-
-    @media screen and (min-width: 600px) {
-      html {
-        font-size: calc(20px + 4 * (100vw - 600px) / 400);
-      }
-    }
-
-    @media screen and (min-width: 1000px) {
-      html {
-        font-size: 14px;
-      }
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #e6f7ff; /* 浅蓝色背景 */
-      color: #333;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .product {
-      background: rgb(166, 203, 196);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-    }
-
-    .product img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .product-info {
-      padding: 1rem;
-    }
-
-    .product-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-
-    .product-description {
-      font-size: 0.95rem;
-      color: #666;
-      margin-bottom: 0.5rem;
-    }
-
-    .product-key {
-      font-size: 1rem;
-      color: #3822c8;
-      font-weight: bold;
-    }
-  </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" />
+<title>六砚·字库</title>
 </head>
+
 <body>
-  <div class="container">
-    <h1>六砚·字库</h1>
-    <div style="background-color: rgb(208, 235, 242); text-align: center; padding: 1.5rem; margin-top: 2rem; font-size: 1rem; color: #555;">
-        本页面展示的所有产品仅供演示，实际功能与价格以官网为准。感谢您的访问！
+<div class="con">
+  <div class="head">
+    <div class="logo">
+      <h1>六砚·字库</h1></div>
+    <div class="clear"> </div>
+    <div class="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="page1.html">数据概览</a></li>
+        <li><a href="page2.html">字影流转</a></li>
+        <li><a href="page3.html">语林采珠</a></li>
+        <li><a href="page4.html">句意传心</a></li>
+        <li><a href="page5.html">章回对映</a></li>
+        <li><a href="page6.html">小组介绍</a></li></ul>
     </div>
-    <div class="products">
-      <div class="product">
-        <img src="./苏东坡.jpg" />
-        <div class="product-info">
-          <div class="product-title">字</div>
-          <div class="product-description">智能记录，支持语音转写，办公学习好帮手。</div>
-          <div class="product-key">PageRank</div>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="./苏东坡.jpg" />
-        <div class="product-info">
-          <div class="product-title">词</div>
-          <div class="product-description">内置丰富学习资源，助你高效学习。</div>
-          <div class="product-key">FP-Tree</div>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="./苏东坡.jpg" />
-        <div class="product-info">
-          <div class="product-title">句</div>
-          <div class="product-description">解放双手，高效生活每一天。</div>
-          <div class="product-key">Embedding</div>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="./苏东坡.jpg" />
-        <div class="product-info">
-          <div class="product-title">诗</div>
-          <div class="product-description">支持中英双向翻译，轻松应对多语场景。</div>
-          <div class="product-key">Shillings</div>
-        </div>
-      </div>
-    </div>
+    <div class="clear"></div>
   </div>
-
-  <div style="background-color: #dff6ff; border-top: 1px solid #b5e1fa; text-align: left; padding: 2rem; margin-top: 3rem; font-size: 1.1rem; color: #333;">
-    团队介绍：六砚斋，诗社虽小，然志存高远。愿吾辈以砚为伴，悟言斋中，共品古典之幽微，同探诗词之新境。六砚斋之名，长存于心，长存于诗，亦长存于公众号 
-    ——《阿笨的虫虫们》。
+  <div class="clear"></div>
+  <div class="lunbo">
+    <video width="850" height="480" controls autoplay muted loop 
+    style="display: block; margin: 20px auto; border: 1px solid #ccc; border-radius: 10px;">
+    <source src="images/中国风水墨开场背景视频素材.mp4" type="video/mp4">
+    您的浏览器不支持 video 标签。
+    </video>
   </div>
+  <div class="clear"></div>
+  <div class="main">
+      <div class="main_in">
+        <h2>&nbsp;六砚 · 字库</h2>
+    
+        <p>在大数据与人工智能技术日益发展的今天，我们尝试将其融入中国古典诗词创作与学习之中。<strong>“六砚·字库”</strong>项目，正是在此背景下应运而生 —— 这是一次以技术重构诗意的尝试，是一次对古典文化的现代解读与数字致敬。</p>
+    
+        <p><strong>六砚·字库</strong>是由《数据挖掘》课程第8小组 —— “六砚斋·数据挖掘坊” 开发的古典诗词智能创作辅助平台。系统基于 <a href="https://github.com/chinese-poetry/chinese-poetry" target="_blank">中文诗歌数据库</a>，涵盖 5.5 万首唐诗、26 万首宋诗、2.1 万首宋词及其他典籍文集，汇聚唐宋约 1.4 万诗人与千余词人之笔墨精华，合计超过 <strong>2000 万字</strong>。</p>
+    
+        <p>平台从数据出发，结合图挖掘、自然语言处理与向量数据库等多种技术，搭建起一个兼具文化深度与交互趣味的创作空间。</p>
+    
+        <h2>&nbsp; 字-词-句-章  四大功能模块</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="icon">🧭</div>
+            <h3>字影流转</h3>
+            <p>基于 <strong>PageRank 图算法</strong>，自动推荐下一个字，化解创作卡顿，点燃灵感之火。</p>
+          </div>
+        
+          <div class="feature-card">
+            <div class="icon">🔍</div>
+            <h3>语林采珠</h3>
+            <p>结合 <strong>xxxx模型</strong>， 。</p>
+          </div>
+        
+          <div class="feature-card">
+            <div class="icon">💬</div>
+            <h3>句意传心</h3>
+            <p>以 <strong>句向量相似度技术</strong>，匹配语义相关诗句，输入今人表达也可搜得古人同义表达，助你语感飞升。</p>
+          </div>
+        
+          <div class="feature-card">
+            <div class="icon">📖</div>
+            <h3>章回对映</h3>
+            <p>通过 <strong>xxxxx分析</strong>，挖掘跨篇呼应、同题异构之美，重塑诗文脉络。</p>
+          </div>
+        </div>
+    
+        <h2>&nbsp; 同时 </h2>
+        <p>本项目的全流程没有接入人工智能大语言模型（LLM），部署轻便，几乎无算力、存储空间要求。</p>
+        <p>“六砚·字库”不仅希望成为学习诗词的智能帮手，更希望成为一个让诗意流动、文化再生的平台。</p>
+        <p>无论是对传统文学的现代解读，还是对 AI 技术的人文拓展，我们都在用诗句与代码共书一段数字文心。</p>
+    
+        <!-- <p style="text-align:center; margin-top: 30px;">
+          <img src="images/logo.png" width="400" alt="六砚字库 LOGO" style="margin: auto;" />
+        </p> -->
+    
+        <p style="text-align: center; font-style: italic; margin-top: 10px;">
+          —— 六砚斋 · 数据挖掘坊
+        </p>
+    
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+  </div>
+  <div class="clear"></div>
+  <div class="foot">六砚斋数据挖掘坊版权所有（视频来源于bilibili）</div>
+  <div class="clear"></div>
+</div>
 </body>
 </html>

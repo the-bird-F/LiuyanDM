@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" />
+<title>六砚·字库</title>
+</head>
+
+<body>
+<div class="con">
+  <div class="head">
+    <div class="logo">
+      <h1>六砚·字库</h1></div>
+    <div class="clear"> </div>
+    <div class="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="page1.html">数据概览</a></li>
+        <li><a href="page2.html">字影流转</a></li>
+        <li><a href="page3.html">语林采珠</a></li>
+        <li><a href="page4.html">句意传心</a></li>
+        <li><a href="page5.html">章回对映</a></li>
+        <li><a href="page6.html">小组介绍</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div class="clear"></div>
+  <div class="banner"><a href="#"><img src="images/水墨.jpg"  width="1024"/></a></div>
+  <div class="clear"></div>
+     <div class="position"><a href="index.html">首页</a><span>/</span>句意传心
+ </div>
+ <div class="main">
+  <div class="main_in">
+    <h2>&nbsp;功能介绍：语义相关诗句推荐</h2>
+
+    <p>在古诗文创作中，或因情绪难以表达成诗，或因灵感不知如何落笔，我们希望通过人工智能技术，提供具有<strong>语义共鸣</strong>的诗句，帮助创作者寻找表达灵感与风格参考。</p>
+
+    <p>本功能基于自然语言处理中的<strong>Word2Vec 向量模型</strong>，将用户输入的现代语言或未完成诗句与数据库中存储的经典诗句进行语义匹配，从中筛选出含义最相近、主题相关性强的若干古诗句作为推荐。</p>
+    <p>本功能不仅适用于诗人、词人进行灵感延展，也可作为教学、赏析、对联辅助的参考工具，赋予古诗词创作以智能化的新体验。</p>
+    
+    <h2>&nbsp;实现原理：Word2Vec 与 相似度检索</h2>
+    
+    <ul style="line-height:1.8;">
+      <li><strong>句向量编码：</strong> 采用 HuggingFace 上预训练的模型 <a href="https://huggingface.co/maidalun1020/bce-embedding-base_v1" target="_blank">bce-embedding-base_v1</a>，将每一句古诗文编码为多维向量，捕捉其上下文语义特征。</li>
+      <li><strong>向量索引与相似度搜索：</strong> 构建高效的向量索引结构，在创作者输入文本向量后，快速计算其与语料库中所有诗句向量的余弦相似度。</li>
+      <li><strong>Top-K 推荐：</strong> 根据相似度得分排序，选出排名前 K 的古诗句作为推荐结果，确保语义相关、风格优雅。</li>
+    </ul>
+
+    <h2>&nbsp;示例展示</h2>
+
+    <!-- 示例区域：底色卡片风格 -->
+    <div style="background: #eef4fb; padding: 15px; border-radius: 8px; border-left: 5px solid #0077cc; font-family: 'Songti SC', serif; margin-bottom: 20px;">
+      <p><strong>【唐诗】</strong></p>
+      <p><strong>创作：</strong>那一天的忧郁忧郁起来</p>
+      <p><strong>推荐：</strong>
+      <ul style="margin-left: 70px;">
+        <li>愁心日散乱，有似空中尘</li>
+        <li>日日日日，黯然黯然</li>
+        <li>昼梦却因惆怅得</li>
+        <li>还有惆怅事，迟迟未能忘</li>
+        <li>沉沉百忧中，一日如一生</li>
+      </ul></p>
+      <p><strong>评价：</strong> 推荐结果紧扣“忧郁”语义，比原句更具古典表达的深度与诗意。</p>
+    </div>
+
+    <div style="background: #f3f0e8; padding: 15px; border-radius: 8px; border-left: 5px solid #aa8844; font-family: 'Songti SC', serif;">
+      <p><strong>【宋词】</strong></p>
+      <p><strong>创作：</strong>只因你太美</p>
+      <p><strong>推荐：</strong>
+      <ul style="margin-left: 70px;">
+        <li>甚美人</li>
+        <li>佳人绝妙</li>
+        <li>美中更美</li>
+        <li>只为个你</li>
+        <li>怜美景，惜芳容</li>
+        <li>美人娇小</li>
+      </ul></p>
+      <p><strong>评价：</strong> 从“美”的意象出发，推荐内容高度匹配情感基调，为创作者提供了丰富的表达选项。</p>
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+
+  <div class="clear"></div>
+  <div class="foot">
+    <p>六砚斋数据挖掘坊版权所有</p>
+  </div>
+  <div class="clear"></div>
+</div>
+</body>
+</html>
